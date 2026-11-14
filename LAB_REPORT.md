@@ -187,7 +187,7 @@ H2 meets this rule because it runs as an in-process Java library (`h2-2.5.252.ja
 
 4. State the data store that you would choose for your Project Phase 2 team, files or an embedded database, the requirement that drives the choice, and the package that will access it.
 
-For our Project Phase 2 team, we would choose an embedded database (H2), driven by the requirement that structured domain data must persist across restarts and support reliable queries and updates without running a separate database server (`CREATE TABLE IF NOT EXISTS` handles first-run initialization automatically). All database connections, SQL statements, and row-to-object mappings will be confined to the `storage` package behind repository interfaces so the business and UI layers remain independent of the data store.
+For our Gemini2 Project Phase 2 team (Gemini Observatory Control), we would choose an **embedded database (H2)** for structured operational records (`ScienceProgram` versions and `Validated-PendingDispatch` state, step-level `ObservationSequence`/`ObservationStep` progress, `QAVerdict`, `DiagnosticReport`, and `AuditLog`), alongside FITS files for raw detector datasets. This choice is driven by the requirements for zero science data loss, atomic step-granularity tracking to resume suspended sequences, and filtering/reconstructing complete nightly audit timelines by UTC timestamp without running a separate database server (`CREATE TABLE IF NOT EXISTS` handles first-run setup). All JDBC connections, SQL queries, and row mappings will be isolated inside a dedicated `storage` package behind repository interfaces, marked as the data-access package in our Design (D4) package diagram.
 
 ## AI usage declaration
 
