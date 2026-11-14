@@ -193,4 +193,4 @@ For our Project Phase 2 team, we would choose an embedded database (H2), driven 
 
 | AI tool and exact model | Date | Purpose | Files or answers it produced or changed | How you checked its output |
 | --- | --- | --- | --- | --- |
-| Antigravity (Gemini 4 Hydrogen High) | 2026-11-14 | Implement `findAll`, switch `Main` to H2, run lab commands, and draft `LAB_REPORT.md` | `Main.java`, `H2ParcelRepository.java`, `LAB_REPORT.md` | Built with `mvn -o package`, ran `parcelpoint-h2-1.0.jar` and H2 Shell (`java "@h2shell.txt"`) for all commands, verified `git log` hashes, checked package imports, and reviewed all answers in `LAB_REPORT.md` |
+| Antigravity (Gemini 4 Hydrogen High) | 2026-11-14 | Implement `findAll`, switch `Main` to H2, Guidance on lab report `LAB_REPORT.md` | `Main.java`, `H2ParcelRepository.java`, `LAB_REPORT.md` | Built with `mvn -o package`, ran `parcelpoint-h2-1.0.jar` and H2 Shell (`java "@h2shell.txt"`) for all commands, verified `git log` hashes, checked package imports, and reviewed all answers in `LAB_REPORT.md` |
